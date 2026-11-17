@@ -1,0 +1,16 @@
+# dsh-ssh-servers bundle patch
+#
+# One row: this package's Host half (index.js). It owns the server/group store,
+# the SSH connection pool, the JSON routes behind the panel, and the ssh_* tools
+# the agent calls.
+#
+# There is deliberately no MCP row here. A bundle cannot point a
+# `@deepseek-ai/dsh-mcp-client` row at a file inside itself without hard-coding
+# an absolute path that only works on the machine that built it, so the tools
+# are registered through ctx.tools.register instead. `mcp-server.mjs` is still
+# shipped: if you prefer the MCP transport, add a row yourself pointing `command:
+# node` at its absolute path, and every tool will appear as `mcp__ssh__<name>`.
+
+- insert:
+    - id: ssh-manager
+      name: 'dsh-ssh-servers'

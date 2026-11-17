@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "SSH 服务器",
+    "description": "面向 agent 运维的分组服务器管理：终端、SFTP 传输、逐条操作审计（含 agent 执行的完整命令），以及每台服务器、每个分组的记忆库——让 AI 改动前先读、改完后记录，避免重复踩坑和业务故障。",
+    "detail": "docs/DETAIL.md"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "dsh-ssh-servers",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 的 SSH 服务器运维面板：分组清单、真实 PTY 终端、SFTP、逐条命令审计，以及每台服务器/每个分组的 agent 记忆库——让 AI 动手前先读、动完手记录，不会重复踩坑。Grouped SSH operations for DSH with a real PTY terminal, SFTP, a per-command audit trail and per-server/per-group memory for the agent.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./mcp-server": "./mcp-server.mjs",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "bin": {
+    "dsh-ssh-servers": "./mcp-server.mjs"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "mcp-server.mjs",
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "package.json"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "dsh-bundle",
+    "ssh",
+    "sftp",
+    "terminal",
+    "server-management",
+    "devops",
+    "ops",
+    "mcp",
+    "audit"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "ssh2": "^1.16.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "SSH servers",
+    "description": "Grouped server management for agent operations: console, SFTP transfer, a per-command audit trail (including the agent's exact command line), and a memory notebook per server and per group — so the model reads before it changes anything and records what it learned after.",
+    "detail": "docs/DETAIL.md"
+  }
+}
